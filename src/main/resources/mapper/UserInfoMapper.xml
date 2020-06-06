@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mysecret.cn.mapper.UserInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mysecret.cn.entity.UserInfo">
+        <id column="uid" property="uid" />
+        <result column="user_role" property="userRole" />
+        <result column="register_source" property="registerSource" />
+        <result column="nick_name" property="nickName" />
+        <result column="gender" property="gender" />
+        <result column="birthday" property="birthday" />
+        <result column="signature" property="signature" />
+        <result column="mobile" property="mobile" />
+        <result column="mobile_bind_time" property="mobileBindTime" />
+        <result column="email" property="email" />
+        <result column="email_bind_time" property="emailBindTime" />
+        <result column="face" property="face" />
+        <result column="face200" property="face200" />
+        <result column="srcface" property="srcface" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="push_token" property="pushToken" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        uid, user_role, register_source, nick_name, gender, birthday, signature, mobile, mobile_bind_time, email, email_bind_time, face, face200, srcface, create_time, update_time, push_token
+    </sql>
+
+</mapper>
