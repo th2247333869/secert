@@ -25,6 +25,6 @@ public class LoginServiceImpl implements LoginService {
         // do add user base
         Long uid = userBaseService.addUserBase(userBase);
         // creat a default user info
-        UserInfo userInfo = UserInfo.builder().uid(uid).email(userBase.getUserName())
+        //UserInfo userInfo = UserInfo.builder().uid(uid).email(userBase.getUserName());
     }
 }
