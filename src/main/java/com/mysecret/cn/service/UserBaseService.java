@@ -16,7 +16,7 @@ public interface UserBaseService extends IService<UserBase> {
     /**
      * 新增一条用户基本信息
      * @param userBase 用户基本信息对象
-     * @return 成功返回 1 失败返回 0
+     * @return 成功对象的id
      */
     Long addUserBase(UserBase userBase);
 

@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.annotations.TableName;
 import java.io.Serializable;
 
 import com.baomidou.mybatisplus.enums.IdType;
+import com.mysecret.cn.common.util.SecurityShaUtils;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -54,4 +55,11 @@ public class UserBase extends Model<UserBase> {
         return this.uid;
     }
 
+    /**
+     * 加密
+     * @throws Exception 异常
+     */
+    public void doUserPasswordSHA() throws Exception{
+        userPassword =  SecurityShaUtils.shaEncode(userPassword);
+    }
 }

@@ -13,7 +13,8 @@ public interface LoginService {
     /**
      * 执行注册方法
      * @param registerUserDTO 注册对象dto
+     * @exception 异常
      */
-    public void doRegister(RegisterUserDTO registerUserDTO);
+    public void doRegister(RegisterUserDTO registerUserDTO) throws Exception;
 
 }
