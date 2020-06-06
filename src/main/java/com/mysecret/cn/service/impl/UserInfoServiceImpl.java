@@ -4,6 +4,7 @@ import com.mysecret.cn.entity.UserInfo;
 import com.mysecret.cn.mapper.UserInfoMapper;
 import com.mysecret.cn.service.UserInfoService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -17,4 +18,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserInfoServiceImpl extends ServiceImpl<UserInfoMapper, UserInfo> implements UserInfoService {
 
+    @Autowired
+    private UserInfoMapper userInfoMapper;
+
+    @Override
+    public int addUserInfo(UserInfo userInfo) {
+        return userInfoMapper.insert(userInfo);
+    }
 }

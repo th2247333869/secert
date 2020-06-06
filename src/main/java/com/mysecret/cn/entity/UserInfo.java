@@ -92,12 +92,12 @@ public class UserInfo extends Model<UserInfo> {
      * 创建时间
      */
     @TableField("create_time")
-    private Integer createTime;
+    private String createTime;
     /**
      * 修改时间
      */
     @TableField("update_time")
-    private Integer updateTime;
+    private String updateTime;
     /**
      * 用户设备push_token
      */

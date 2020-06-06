@@ -1,5 +1,6 @@
 package com.mysecret.cn.service.impl;
 
+import com.mysecret.cn.common.util.DateUtils;
 import com.mysecret.cn.dto.RegisterUserDTO;
 import com.mysecret.cn.entity.UserBase;
 import com.mysecret.cn.entity.UserInfo;
@@ -7,12 +8,14 @@ import com.mysecret.cn.service.LoginService;
 import com.mysecret.cn.service.UserBaseService;
 import com.mysecret.cn.service.UserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @date 200606
  * @author tianhao
  */
+@Service
 public class LoginServiceImpl implements LoginService {
 
     @Autowired
@@ -36,6 +39,9 @@ public class LoginServiceImpl implements LoginService {
                 .userRole(2)
                 .registerSource(2)
                 .pushToken(registerUserDTO.getIp())
+                .createTime(DateUtils.getStrNow())
+                .updateTime(DateUtils.getStrNow())
+
                 .build();
         // save add user info
         userInfoService.addUserInfo(userInfo);

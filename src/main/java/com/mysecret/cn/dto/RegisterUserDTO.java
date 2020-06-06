@@ -30,11 +30,6 @@ public class RegisterUserDTO {
     private String userPassword;
 
     /**
-     *密码盐
-     */
-    private String userSalt;
-
-    /**
      * 网络地址
      */
     @NotNull

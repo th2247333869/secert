@@ -1,7 +1,6 @@
 package com.mysecret.cn.service;
 
 import com.mysecret.cn.dto.RegisterUserDTO;
-import com.mysecret.cn.entity.UserInfo;
 
 
 /**
@@ -12,9 +11,9 @@ public interface LoginService {
 
     /**
      * 执行注册方法
-     * @param registerUserDTO 注册对象dto
-     * @exception 异常
+     * @param registerUserDTO 注册对象
+     * @throws Exception
      */
-    public void doRegister(RegisterUserDTO registerUserDTO) throws Exception;
+    void doRegister(RegisterUserDTO registerUserDTO) throws Exception;
 
 }
